@@ -93,6 +93,10 @@ router.get('/edit-post/:id', logginCheck, async (req, res) => {
         res.status(500).json(err);
     }
 });
+// this renders the search page for the user. We need to make a search.handlebars
+router.get('/search', async (req, res) => {
+    res.render('search');
+});
 
 // this renders the login page for the user
 router.get('/login', async (req, res) => {
